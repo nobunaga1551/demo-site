@@ -3,60 +3,26 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="プロフィール">
-  <section class="about">
-    <h1>プロフィール</h1>
+  <section class="max-w-3xl mx-auto">
+    <h1 class="text-3xl font-bold mb-8">プロフィール</h1>
 
-    <div class="profile">
-      <img src="/profile.jpg" alt="プロフィール写真" class="profile-img" />
-      <div class="profile-text">
-        <h2>Your Name</h2>
-        <p>職種・肩書きをここに書く</p>
-        <p>自己紹介文をここに書く。経歴や得意なことなど。</p>
+    <div class="flex gap-8 items-start mb-12">
+      <img src="/profile.jpg" alt="プロフィール写真"
+        class="w-40 h-40 rounded-full object-cover shrink-0" />
+      <div>
+        <h2 class="text-2xl font-bold mb-2">Your Name</h2>
+        <p class="text-gray-500 mb-2">職種・肩書きをここに書く</p>
+        <p class="text-gray-600">自己紹介文をここに書く。経歴や得意なことなど。</p>
       </div>
     </div>
 
-    <div class="skills">
-      <h2>スキル</h2>
-      <ul>
-        <li>webデザイナー</li>
-        <li>画像処理エンジニア</li>
-        <li>クラウドエンジニア</li>
+    <div>
+      <h2 class="text-2xl font-bold border-b-2 border-gray-800 pb-2 mb-4">スキル</h2>
+      <ul class="flex gap-3 flex-wrap list-none p-0">
+        <li class="bg-gray-100 px-4 py-1 rounded-full">webデザイナー</li>
+        <li class="bg-gray-100 px-4 py-1 rounded-full">画像処理エンジニア</li>
+        <li class="bg-gray-100 px-4 py-1 rounded-full">クラウドエンジニア</li>
       </ul>
     </div>
   </section>
 </Layout>
-
-<style>
-  .about {
-    max-width: 800px;
-    margin: 0 auto;
-  }
-
-  .profile {
-    display: flex;
-    gap: 2rem;
-    align-items: flex-start;
-    margin: 2rem 0;
-  }
-
-  .profile-img {
-    width: 160px;
-    height: 160px;
-    border-radius: 50%;
-    object-fit: cover;
-  }
-
-  .skills ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    gap: 1rem;
-    flex-wrap: wrap;
-  }
-
-  .skills li {
-    background: #f0f0f0;
-    padding: 0.4rem 1rem;
-    border-radius: 20px;
-  }
-</style>
