@@ -1,0 +1,62 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="プロフィール">
+  <section class="about">
+    <h1>プロフィール</h1>
+
+    <div class="profile">
+      <img src="/profile.jpg" alt="プロフィール写真" class="profile-img" />
+      <div class="profile-text">
+        <h2>Your Name</h2>
+        <p>職種・肩書きをここに書く</p>
+        <p>自己紹介文をここに書く。経歴や得意なことなど。</p>
+      </div>
+    </div>
+
+    <div class="skills">
+      <h2>スキル</h2>
+      <ul>
+        <li>webデザイナー</li>
+        <li>画像処理エンジニア</li>
+        <li>クラウドエンジニア</li>
+      </ul>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .about {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .profile {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+    margin: 2rem 0;
+  }
+
+  .profile-img {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  .skills ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .skills li {
+    background: #f0f0f0;
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+  }
+</style>
